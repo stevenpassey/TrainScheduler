@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+body
+{
+	background-color: black;
+	font-family: 'Ubuntu Mono', monospace;
+	color: rgb(176, 176, 176);
+	overflow: hidden;
+}
+
+.top-right-logo
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-size: 1vw;
+}
+
+.train-add-form-container
+{
+	position: absolute;
+	right: 0;
+	top: 0px;
+	color: black;
+	width: 59.5vw;
+	height: 10vw;
+	background-color: rgb(0, 205, 205);
+	font-weight: bold;
+	font-size: 2vw;
+	visibility: hidden;
+}
+
+.input-container
+{
+	margin-bottom: 0.5vw;
+}
+
+.input-container input[type="text"]
+{
+	outline: none;
+	border: none;
+	background-color: black;
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 2vw;
+	background-color: rgb(0, 205, 205);
+	font-weight: bold;
+}
+
+#name-input { width: 47.48vw; }
+#dest-input { width: 46.48vw; }
+#init-input { width: 38.48vw; }
+#freq-input { width: 42.48vw; }
+
+.table-header-bar
+{
+	position: absolute;
+	left: 0px;
+	top: 10vw;
+	width: 100%;
+	height: 2.3vw;
+	background-color: rgb(0, 205, 0);
+	cursor: default;
+}
+
+.table-header-col
+{
+	position: absolute;
+	top: 1px;
+	color: black;
+	font-weight: bold;
+	font-size: 2vw;
+	text-transform: uppercase;
+}
+
+.col-1 { left: 7.5vw; }
+
+.col-2 { left: 32vw; }
+
+.col-3 { left: 50vw; }
+
+.col-4 { left: 69vw; }
+
+.col-5 { left: 85vw; }
+
+.table-row
+{
+	position: absolute;
+	left: 0px;
+	top: 0vw;
+	width: 100%;
+	height: 2.3vw;
+	color: rgb(176, 176, 176);
+	background-color: black;
+	cursor: default;
+}
+
+.table-row-cell
+{
+	position: absolute;
+	top: 1px;
+	font-weight: bold;
+	font-size: 2vw;
+	width: 25vw;
+	height: 2.3vw;
+	overflow: hidden;
+}
+
+.cell-1 { left: 0vw; text-align: center; }
+
+.cell-2 { left: 25vw; text-align: center; }
+
+.cell-3 { left: 50vw; width: 15vw; text-align: center; }
+
+.cell-4 { left: 71.5vw; }
+
+.cell-5 { left: 90vw; }
+
+.footer-key-bar
+{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2vw;
+	font-size: 2vw;
+	cursor: default;
+}
+
+.key-value
+{
+	position: absolute;
+	top: 0px;
+}
+
+.key-label
+{
+	position: absolute;
+	top: 0px;
+	background-color: rgb(0, 203, 203);
+	color: black;
+	width: 6vw;
+}
+
+.col-1-value { left: 0vw; }
+.col-1-label { left: 2vw; }
+
+.col-2-value { left: 8vw; }
+.col-2-label { left: 10vw; }
+
+.col-3-value { left: 16vw; }
+.col-3-label { left: 18vw; }
+
+.col-4-value { left: 24vw; }
+.col-4-label { left: 26vw; }
+
+.col-5-value { left: 32vw; }
+.col-5-label { left: 34vw; }
+
+.col-6-value { left: 40vw; }
+.col-6-label { left: 42vw; }
+
+.col-7-value { left: 48vw; }
+.col-7-label { left: 50vw; }
+
+.col-8-value { left: 56vw; }
+.col-8-label { left: 58vw; }
+
+.col-9-value { left: 64vw; }
+.col-9-label { left: 66vw; }
+
+.col-10-value { left: 72vw; }
+.col-10-label { left: 75vw; }
+
+.footer-text
+{
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 2vw;
+	font-size: 2vw;
+	background-color: black;
+	visibility: hidden;
+}
+
+.footer-text-blue
+{
+	display: inline-block;
+	background-color: rgb(0, 203, 203);
+	color: black;
+	width: 97.98vw;
+	margin-left: -1vw;
+}
