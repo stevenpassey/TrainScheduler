@@ -36,6 +36,8 @@ $( document ).ready(function() {
 	var row_dest = snapshot.val().dest;
 	var row_init = snapshot.val().init;
 	var row_freq = snapshot.val().freq;
+	var row_away = calculate_minutesAway(row_init, row_freq);
+	var row_next = calculate_nextTime(row_away);
 
 	key_array.push(snapshot.key);
 
@@ -52,10 +54,10 @@ $( document ).ready(function() {
 						row_freq +
 					'</div>' +
 					'<div class="table-row-cell cell-4">' +
-						'9:00 AM' +
+						row_next +
 					'</div>' +
 					'<div class="table-row-cell cell-5">' +
-						'60' +
+						row_away +
 					'</div>' +
 			     '</div>');      
 
@@ -282,6 +284,8 @@ function rebuild_from_key_array()
 				var row_dest = rebuild_child_array.dest;
 				var row_init = rebuild_child_array.init;
 				var row_freq = rebuild_child_array.freq;
+				var row_away = calculate_minutesAway(row_init, row_freq);
+				var row_next = calculate_nextTime(row_away);
 
 				$("body").append('<div class="table-row" id="row-' + row_count + '" style="top: ' + row_y_start + 'vw;">' +
 								'<div class="table-row-cell cell-1">' +
@@ -294,10 +298,10 @@ function rebuild_from_key_array()
 									row_freq +
 								'</div>' +
 								'<div class="table-row-cell cell-4">' +
-									'9:00 AM' +
+									row_next +
 								'</div>' +
 								'<div class="table-row-cell cell-5">' +
-									'60' +
+									row_away +
 								'</div>' +
 					           '</div>');
 			
@@ -305,4 +309,14 @@ function rebuild_from_key_array()
 			}
 		} 
 	});
+}
+
+function calculate_minutesAway(row_init, row_freq)
+{
+	return row_freq - (moment().diff(moment(moment(row_init, "HH:mm").subtract(1, "years")), "minutes") % row_freq);
+}
+
+function calculate_nextTime(minutesAway)
+{
+	return moment(moment().add(minutesAway, "minutes")).format("hh:mm");
 }
