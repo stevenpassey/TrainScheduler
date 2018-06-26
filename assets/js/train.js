@@ -318,5 +318,5 @@ function calculate_minutesAway(row_init, row_freq)
 
 function calculate_nextTime(minutesAway)
 {
-	return moment(moment().add(minutesAway, "minutes")).format("hh:mm");
+	return moment(moment().add(minutesAway, "minutes")).format("hh:mm A");
 }
