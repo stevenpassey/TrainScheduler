@@ -5,7 +5,7 @@ body
 	background-color: black;
 	font-family: 'Ubuntu Mono', monospace;
 	color: rgb(176, 176, 176);
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 .top-right-logo
@@ -124,6 +124,8 @@ body
 	height: 2vw;
 	font-size: 2vw;
 	cursor: default;
+	z-index: 50;
+	background-color: black;
 }
 
 .key-value
